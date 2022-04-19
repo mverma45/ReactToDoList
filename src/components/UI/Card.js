@@ -1,3 +1,4 @@
+import React from "react"
 import "./Card.css"
 
 //card in web development means a look with dropshadows and rounded corners.
