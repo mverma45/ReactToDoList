@@ -1,6 +1,8 @@
-import Expenses from "./components/Expenses"
+//we don't need to put the import React from "react" because React is smart enough to figure this out but in older React projects we need to add this.
+import React from "react"
+import Expenses from "./components/Expenses/Expenses"
 
-function App() {
+const App = () => {
   const expenses = [
     {
       id: "e1",
@@ -22,6 +24,17 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ]
+
+  // *this is the same as the the code below, this is what happens under the hood.  We used to have to do import React from 'react' we don't have to do that anymore, the projects are able to figure out this on it it's own.  We could write everything like this if we wanted.
+
+  // return React.createElement(
+  //   "div",
+  //   {},
+  //   React.createElement("h2", {}, "Let's get started"),
+  //   React.createElement(Expenses, { items: expenses })
+  // )
+
+  //* This code is more humanreadable, this is JSX code.
   return (
     <div>
       <h2>Let's get started!</h2>
