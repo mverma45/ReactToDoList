@@ -1,0 +1,19 @@
+Naming the functions it's conventional we should name our functions like clickHandler if they are trigged upon an event. We don't have to do that way, but it's convenient.
+we want to define a function before the return keyword we can do it wit the function or the => (arrow function).
+we want to keep our JSX logic lean and not put too much logic in the code.
+props are just properties, props are used to pass data from one component to another.
+must have only 1 root element in a return statement, 1 work around is to wrap it in a opening and closing div. also we can put parentheses () around to tell javascript it's on statement. Props we pass a component to a direct child component.
+we just split up our code in multiple files and then combine them together
+our customer components will not show up on the developer tools. Our personal components we create such as ex. <card></card> are not really HTML elements, we just use them in our code they are custom. All the custom components use the HTML components if we drill deep enough we will find an underlying HTML components.
+
+React allows you to create re-usable and reactive components consisting of HTML Javascript and CSS.
+With react we follow the declarative approach, we define the target states and react then takes care of reaching that state.
+The component is a regular function
+State
+State is a plain Javascript object used by React to represent an information about the components current situation. It's managed in the component (just like any variable declard in a function)
+State is not a react specific concept but it is a react key concept as well
+React doesn't care if a variable changes react ignores it.
+useState is a function provided by the react library, this function allows us to define values as state. Where changes to the values should reflect in the component function.
+To use state we go inside the component function, we call useState, useState is a React hook, useState is an important hook.
+All react hooks start with use and they must be called inside the component functions. We can't call them outside the function. Also they can't be called in nested functions they must be called directly inside the function.
+useState needs a special value.
