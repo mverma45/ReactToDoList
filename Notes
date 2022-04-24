@@ -26,3 +26,11 @@ We can use a const because we are not reassigning a value with the equals (=) si
 When the component function is executed when the state is updated.
 
 React keeps track of when 'useState' for the first time, when it's called for the first time ever it will take the argument as an initial value if the component is re executed react will not re inialize the state. It will protect the state it had and wrap the latest state
+
+User input
+we need to add listeners to listen to every keystroke.
+we can do that on the element we want to add a listener.
+onInput will listen to every keystroke
+onChange does the same as onInput but onChange we can listen to all the dropdowns
+we can define it inline with a function or an arrow function.
+But it's better to define it up front.
