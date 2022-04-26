@@ -34,3 +34,7 @@ onInput will listen to every keystroke
 onChange does the same as onInput but onChange we can listen to all the dropdowns
 we can define it inline with a function or an arrow function.
 But it's better to define it up front.
+
+Two way binding
+Which means we don't just listen for the changes but we also pass a new value back to the input.
+so we can reset or change the program.
