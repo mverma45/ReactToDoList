@@ -38,3 +38,7 @@ But it's better to define it up front.
 Two way binding
 Which means we don't just listen for the changes but we also pass a new value back to the input.
 so we can reset or change the program.
+
+We can pass components down from parent to child using props, props can only be passed from parent to child we can't skip intermediate components.
+
+To push data up from child to parent

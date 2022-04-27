@@ -28,6 +28,11 @@ const App = () => {
 
   // *this is the same as the the code below, this is what happens under the hood.  We used to have to do import React from 'react' we don't have to do that anymore, the projects are able to figure out this on it it's own.  We could write everything like this if we wanted.
 
+  const addExpenseHandler = expense => {
+    console.log("In app.js")
+    console.log(expense)
+  }
+
   // return React.createElement(
   //   "div",
   //   {},
@@ -38,7 +43,7 @@ const App = () => {
   //* This code is more humanreadable, this is JSX code.
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   )
