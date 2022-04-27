@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import "./ExpenseForm.css"
 
-const ExpenseForm = () => {
+const ExpenseForm = props => {
   const [enteredTitle, setEnteredTitle] = useState("")
   const [enteredAmount, setEnteredAmount] = useState("")
   const [enteredDate, setEnteredDate] = useState("")
@@ -55,7 +55,8 @@ const ExpenseForm = () => {
       date: new Date(enteredDate),
       //this will parse the date string and convert it to a date object.
     }
-    console.log(expenseData)
+    // console.log(expenseData) instead of logging the expenseData we are going to do the following on the line below.  Since this is props now.
+    props.onSaveExpenseData(expenseData)
     setEnteredTitle("")
     setEnteredAmount("")
     setEnteredDate("")
@@ -71,6 +72,13 @@ const ExpenseForm = () => {
             value={enteredTitle}
             onChange={titleChangeHandler}
           />
+          {/*To push data up from child to parent
+          when the user types the function for example titleChangeHandler executes, then we get the default event object that's something the browser gives.  Then react adds the listener on the rendered input element.
+          In the parent component, create a callback function. ...
+          Pass the callback function to the child as a props from the parent component.
+          The child component calls the parent callback function using props and passes the data to the parent component.
+          */}
+
           {/* adding the value attribute will reset or change the input, this will set the input internal value property which every internal value has.  Also we can set it to a new value. That is now two way binding, now we just don't listen to changes in the input to update the state we also feed the state into the input so when he change we also */}
         </div>
         <div className="new-expense__control">
