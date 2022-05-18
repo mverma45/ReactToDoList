@@ -49,3 +49,6 @@ To push data up from child to parent
 Lifting State Up
 We can move up the component to the closest ancestor, lets say we have an app component and two sibling components Expense and New Expense, since Expense and New Expense are independent components. But we want them to sync up, we can lift up the state to the app components using props. By passing data to the function, by doing that we lift that state up. We lift that component to the app component so we can use it. When we say lifting the state up we either use it there or we pass it back down another child component.
 more info on https://reactjs.org/docs/lifting-state-up.html
+
+Conditional Output
+is rendering A or B if depends on the situation.
